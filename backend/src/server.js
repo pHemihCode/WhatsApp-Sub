@@ -10,6 +10,7 @@ const userRequestsRoutes = require("./routes/userRequests");
 const paymentRoutes = require("./routes/payment");
 const adminRoutes = require("./routes/admin");
 const webhookRoutes = require("./routes/webhooks");
+const authRoutes = require("./routes/auth");
 // const whatsappService = require('./services/whatsappService');
 
 dotenv.config();
@@ -26,6 +27,7 @@ app.use("/api/whatsapp", whatsappRoutes);
 app.use("/api/sheets", sheetsRoutes);
 app.use("/api/subscription", subscriptionRoutes);
 app.use("/api/requests", userRequestsRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/webhooks", webhookRoutes);
